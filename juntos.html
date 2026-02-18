@@ -3,30 +3,131 @@
 <head>
 <meta charset="UTF-8">
 <title>Juntos</title>
+
 <style>
 body{
+    margin:0;
     font-family:Arial;
-    background:#2b1055;
-    color:white;
-    padding:60px;
+    background:#cfe9f7; /* azul pastel */
+    color:#2b2b2b;
+    padding:60px 20px;
     text-align:center;
+    position:relative;
+    overflow-x:hidden;
 }
+
+/* Detalles amarillo pastel */
+.decoracion{
+    position:fixed;
+    width:200px;
+    height:200px;
+    background:#fff4b3; /* amarillo pastel */
+    border-radius:50%;
+    opacity:0.4;
+    z-index:0;
+}
+
+.d1{ top:-70px; left:-70px; }
+.d2{ bottom:-70px; right:-70px; }
+.d3{ top:40%; left:-100px; }
+.d4{ top:20%; right:-100px; }
+
+h1{
+    font-size:42px;
+    margin-bottom:40px;
+    position:relative;
+    z-index:1;
+}
+
+p{
+    font-size:22px;
+    line-height:1.9;
+    max-width:900px;
+    margin:30px auto;
+    position:relative;
+    z-index:1;
+}
+
+/* Polaroid futura */
+.polaroid{
+    display:inline-block;
+    background:white;
+    padding:15px 15px 50px 15px;
+    margin:60px 0;
+    box-shadow:0 15px 30px rgba(0,0,0,0.4);
+    transform:rotate(-2deg);
+    transition:0.4s;
+    border-radius:5px;
+    position:relative;
+    z-index:1;
+}
+
+.polaroid img{
+    width:280px;
+    max-width:90%;
+    display:block;
+}
+
+.polaroid p{
+    color:black;
+    margin-top:10px;
+    font-size:14px;
+}
+
+.polaroid:hover{
+    transform:rotate(0deg) scale(1.08);
+}
+
+/* Botón */
 a{
-    color:#ff4dff;
+    display:inline-block;
+    margin-top:40px;
+    padding:12px 30px;
+    background:#ffe680;
+    color:#333;
+    border-radius:25px;
     text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+    position:relative;
+    z-index:1;
+}
+
+a:hover{
+    transform:scale(1.1);
+    background:#ffdd55;
 }
 </style>
 </head>
 
 <body>
 
+<!-- Decoraciones -->
+<div class="decoracion d1"></div>
+<div class="decoracion d2"></div>
+<div class="decoracion d3"></div>
+<div class="decoracion d4"></div>
+
 <h1>Juntos 🌙</h1>
 
 <p>
-Quiero nuestra casita en Palmas...
+Mi corazoncito hermoso, esta parte quiero dejarla para el día en que al fin nos veamos sin pantallas de por medio, sin kilómetros separándonos. Aquí quiero guardar todas esas foticos cuando estemos juntos, cuando ya no tengamos que despedirnos por llamada sino con un abrazo real.
 </p>
 
-<br>
+<p>
+Quiero que este espacio sea nuestro recuerdo de que la distancia fue solo una etapa. Que algún día podamos mirar atrás y decir: “valió la pena esperar”. Porque lo nuestro no es algo pasajero, es algo que quiero construir paso a paso hasta que ya no haya distancia, solo tú y yo.
+</p>
+
+<p>
+Te amo muchisisisísimo mi corazoncito hermoso, y quiero llenar este lugar con nuestras sonrisas reales, nuestros abrazos verdaderos y nuestros momentos que todavía están por venir.
+</p>
+
+<!-- FOTO FUTURA -->
+<div class="polaroid">
+    <img src="fotofutura.jpeg" alt="Nuestra primera foto juntos">
+    <p>Nuestro primer recuerdo sin distancia 💛</p>
+</div>
+
 <a href="index.html">← Volver</a>
 
 </body>
