@@ -3,34 +3,57 @@
 <head>
 <meta charset="UTF-8">
 <title>Para Kamila ❤️</title>
+
 <style>
 body{
     margin:0;
     font-family:Arial;
-    background:linear-gradient(135deg,#1e1e2f,#2b1055,#0f0c29);
+    background:#cfe9f7; /* azul pastel */
     display:flex;
     justify-content:center;
     align-items:center;
     height:100vh;
-    color:white;
     text-align:center;
+    overflow:hidden;
+    position:relative;
 }
 
+h1{
+    color:#2b2b2b;
+    margin-bottom:40px;
+}
+
+/* Botones amarillo pastel */
 button{
     display:block;
-    margin:20px auto;
-    padding:15px 30px;
+    margin:15px auto;
+    padding:15px 35px;
     font-size:18px;
     border:none;
     border-radius:30px;
-    background:#ff4dff;
-    color:white;
+    background:#ffe680;
+    color:#333;
     cursor:pointer;
     transition:0.3s;
+    font-weight:bold;
 }
 
 button:hover{
     transform:scale(1.1);
+    background:#ffdd55;
+}
+
+/* Corazones flotando */
+.corazon{
+    position:absolute;
+    color:#ff9acb;
+    animation:subir 6s linear infinite;
+    font-size:20px;
+}
+
+@keyframes subir{
+    0%{ transform:translateY(100vh); opacity:1; }
+    100%{ transform:translateY(-10vh); opacity:0; }
 }
 </style>
 </head>
@@ -38,13 +61,24 @@ button:hover{
 <body>
 
 <div>
-<h1>Para mi hermosa Kamila 💖</h1>
+<h1>Para mi hermosa Kamila 💙</h1>
 
 <button onclick="location.href='novia.html'">Mi hermosa novia</button>
 <button onclick="location.href='razones.html'">100 cosas para amarte</button>
 <button onclick="location.href='juntos.html'">Juntos</button>
-
+<button onclick="location.href='cuanto.html'">Cuánto te amo</button>
 </div>
+
+<script>
+setInterval(()=>{
+    const corazon=document.createElement("div");
+    corazon.className="corazon";
+    corazon.innerHTML="💛";
+    corazon.style.left=Math.random()*100+"vw";
+    document.body.appendChild(corazon);
+    setTimeout(()=>corazon.remove(),6000);
+},500);
+</script>
 
 </body>
 </html>
