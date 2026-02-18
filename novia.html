@@ -6,16 +6,37 @@
 
 <style>
 body{
+    margin:0;
     font-family:Arial;
-    background:linear-gradient(135deg,#0f0c29,#1e1e2f,#2b1055);
-    color:white;
+    background:#cfe9f7; /* azul pastel */
+    color:#2b2b2b;
     padding:60px 20px;
     text-align:center;
+    position:relative;
+    overflow-x:hidden;
 }
+
+/* Detalles amarillo pastel */
+.decoracion{
+    position:fixed;
+    width:180px;
+    height:180px;
+    background:#fff4b3; /* amarillo pastel */
+    border-radius:50%;
+    opacity:0.4;
+    z-index:0;
+}
+
+.d1{ top:-60px; left:-60px; }
+.d2{ bottom:-60px; right:-60px; }
+.d3{ top:40%; left:-80px; }
+.d4{ top:20%; right:-80px; }
 
 h1{
     font-size:40px;
     margin-bottom:40px;
+    position:relative;
+    z-index:1;
 }
 
 p{
@@ -23,6 +44,8 @@ p{
     line-height:1.9;
     max-width:900px;
     margin:30px auto;
+    position:relative;
+    z-index:1;
 }
 
 /* POLAROID */
@@ -31,10 +54,12 @@ p{
     background:white;
     padding:15px 15px 50px 15px;
     margin:50px 0;
-    box-shadow:0 15px 30px rgba(0,0,0,0.6);
+    box-shadow:0 15px 30px rgba(0,0,0,0.4);
     transform:rotate(-3deg);
     transition:0.4s;
     border-radius:5px;
+    position:relative;
+    z-index:1;
 }
 
 .polaroid img{
@@ -53,24 +78,35 @@ p{
     transform:rotate(0deg) scale(1.1);
 }
 
+/* Botón amarillo pastel */
 a{
     display:inline-block;
     margin-top:50px;
-    padding:10px 25px;
-    background:#ff4dff;
-    color:white;
+    padding:12px 30px;
+    background:#ffe680; /* amarillo pastel */
+    color:#333;
     border-radius:25px;
     text-decoration:none;
     transition:0.3s;
+    font-weight:bold;
+    position:relative;
+    z-index:1;
 }
 
 a:hover{
     transform:scale(1.1);
+    background:#ffdd55;
 }
 </style>
 </head>
 
 <body>
+
+<!-- Decoraciones -->
+<div class="decoracion d1"></div>
+<div class="decoracion d2"></div>
+<div class="decoracion d3"></div>
+<div class="decoracion d4"></div>
 
 <h1>Mi hermosa novia Kamila 💖</h1>
 
@@ -111,7 +147,7 @@ No sabes cuánto te amo, mi corazón hermoso. A veces duele no poder abrazarte c
 </div>
 
 <p>
-Quiero que seamos tú y yo para siempre, mi niña linda. Quiero crecer contigo, superar todo contigo, madurar juntos. Quiero que esta distancia sea solo una etapa que algún día recordemos diciendo: “¿ves? lo logramos”. Quiero nuestra casita en Palmas, nuestros gatos, nuestros hijos, nuestras risas en la misma habitación y no a través de un micrófono.
+Quiero que seamos tú y yo para siempre, mi niña linda. Quiero crecer contigo, superar todo contigo, madurar juntos. Quiero que esta distancia sea solo una etapa que algún día recordemos diciendo: “¿ves? lo logramos?”. Quiero nuestra casita en Palmas, nuestros gatos, nuestros hijos, nuestras risas en la misma habitación y no a través de un micrófono.
 </p>
 
 <div class="polaroid">
