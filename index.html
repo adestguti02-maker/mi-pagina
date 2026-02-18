@@ -1,11 +1,56 @@
-index.html
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
     <title>Mi Página</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1e1e2f, #302b63, #24243e);
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            padding: 100px 20px;
+        }
+
+        h1 {
+            font-size: 50px;
+        }
+
+        p {
+            font-size: 20px;
+            opacity: 0.8;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 30px;
+            background: #ff4b2b;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #ff416c;
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
-    <h1>Hola 🌎</h1>
-    <p>Esta es mi primera página online.</p>
+
+    <div class="container">
+        <h1>Bienvenido 🌎</h1>
+        <p>Esta es mi página web publicada en internet 🚀</p>
+        <button onclick="alert('Gracias por visitar mi página 😎')">
+            Haz clic aquí
+        </button>
+    </div>
+
 </body>
 </html>
