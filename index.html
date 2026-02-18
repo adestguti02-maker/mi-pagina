@@ -11,49 +11,46 @@ body{
     background: linear-gradient(135deg, #1e1e2f, #2b1055, #0f0c29);
     color:white;
     overflow-x:hidden;
+    scroll-behavior:smooth;
 }
 
-/* Bienvenida */
-#bienvenida{
+/* Menú */
+.menu{
     position:fixed;
+    top:0;
     width:100%;
-    height:100vh;
-    background:black;
+    background:rgba(0,0,0,0.7);
     display:flex;
     justify-content:center;
-    align-items:center;
-    z-index:1000;
-    animation: fadeOut 3s forwards;
-    animation-delay:3s;
+    gap:20px;
+    padding:15px;
+    z-index:999;
 }
 
-#bienvenida h1{
-    font-size:50px;
-    color:#ff9dfc;
-    text-shadow:0 0 20px #ff00ff;
-    animation: latido 2s infinite;
+.menu button{
+    padding:10px 20px;
+    border:none;
+    border-radius:20px;
+    background:#ff4dff;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
 }
 
-@keyframes fadeOut{
-    to{opacity:0; visibility:hidden;}
-}
-
-@keyframes latido{
-    0%{transform:scale(1);}
-    50%{transform:scale(1.1);}
-    100%{transform:scale(1);}
-}
-
-.brillo{
-    color:#ff9dfc;
-    text-shadow:0 0 10px #ff4dff,0 0 20px #ff4dff,0 0 40px #ff00ff;
+.menu button:hover{
+    transform:scale(1.1);
 }
 
 section{
-    padding:80px 20px;
+    padding:120px 20px 80px 20px;
     max-width:900px;
     margin:auto;
     text-align:center;
+}
+
+h1{
+    font-size:40px;
+    margin-bottom:30px;
 }
 
 p{
@@ -62,30 +59,9 @@ p{
     margin-bottom:25px;
 }
 
-/* Botón */
-button{
-    padding:15px 30px;
-    font-size:18px;
-    border:none;
-    border-radius:30px;
-    background:#ff4dff;
-    color:white;
-    cursor:pointer;
-    margin-top:20px;
-    transition:0.3s;
-}
-
-button:hover{
-    transform:scale(1.1);
-}
-
-/* Carta */
-#carta{
-    display:none;
-    background:rgba(255,255,255,0.1);
-    padding:30px;
-    border-radius:20px;
-    margin-top:30px;
+.brillo{
+    color:#ff9dfc;
+    text-shadow:0 0 10px #ff4dff,0 0 20px #ff4dff,0 0 40px #ff00ff;
 }
 
 /* Corazones */
@@ -122,10 +98,11 @@ footer{
 
 <body>
 
-<!-- Bienvenida -->
-<div id="bienvenida">
-    <h1>Bienvenida Kamila 💖</h1>
-</div>
+<nav class="menu">
+    <button onclick="irA('novia')">Mi hermosa novia 💖</button>
+    <button onclick="irA('razones')">100 cosas para amarte 💌</button>
+    <button onclick="irA('juntos')">Juntos 🌙</button>
+</nav>
 
 <!-- Música -->
 <iframe width="0" height="0" 
@@ -133,32 +110,90 @@ src="https://www.youtube.com/embed/0O2aH4XLbto?autoplay=1&loop=1&playlist=0O2aH4
 frameborder="0" allow="autoplay">
 </iframe>
 
-<section>
-<h1>pq te amo, <span class="brillo">Kamila</span></h1>
+<section id="novia">
+<h1>Mi hermosa novia <span class="brillo">Kamila</span></h1>
 
 <p>
-Kamila, te amo con una profundidad que a veces me deja sin palabras. Te amo porque eres fuerte incluso cuando estás cansada, porque sigues intentando aunque el mundo pese. Amo tu corazón noble, tu forma sincera de sentir y la manera tan real en la que amas.
+Kamila, te amo con una profundidad que a veces me deja sin palabras. Lo que siento por ti no es algo ligero ni momentáneo, es algo que crece incluso en la distancia. Te amo porque eres fuerte incluso cuando estás cansada, porque sigues intentando aunque el mundo pese sobre tus hombros.
 </p>
 
 <p>
-Amo tus ojos porque brillan como si guardaran estrellas dentro, porque cuando me miras siento paz y emoción al mismo tiempo. Amo tus cachetes porque cuando sonríes se ven tan tiernos que me derriten completamente.
+Admiro tu corazón noble, tu forma sincera de sentir y la manera tan real en la que amas. Me enamora tu sensibilidad, tu forma de preocuparte, tu manera de querer de verdad. Contigo aprendí que amar es elegir quedarse incluso cuando hay kilómetros de por medio.
 </p>
 
 <p>
-Te amo porque contigo entendí que el amor no es perfecto, pero sí es constante. Y yo quiero ser constante contigo, quiero elegirte cada día, en los momentos buenos y en los difíciles.
-</p>
-
-<button onclick="mostrarCarta()">Abrir mi carta para ti 💌</button>
-
-<div id="carta">
-<p>
-Perdón por equivocarme tantas veces pero prometo mejorar cada día para que ninguno se vaya y durar toda la vida, tener nuestra casita en Palmas, tener nuestros gatos e hijos y construir algo eterno juntos.
+Amo tus ojos porque brillan como si guardaran estrellas dentro, incluso a través de una pantalla. Cuando sonríes en videollamada siento paz y emoción al mismo tiempo. Y amo tus cachetes porque cuando sonríes se ven tan tiernos que me derriten completamente.
 </p>
 
 <p>
-Te amo mucho mi bebé preciosa, más de lo que a veces sé explicar, y aunque tropiece siempre voy a querer quedarme contigo.
+La distancia no es el final, es una prueba. Y yo quiero pasar esa prueba contigo.
 </p>
-</div>
+
+</section>
+
+<section id="razones">
+<h1>100 cosas para amarte 💌</h1>
+
+<p>
+1. Porque me haces feliz.  
+2. Porque me das paz.  
+3. Porque me escuchas.  
+4. Porque me entiendes.  
+5. Porque tienes un corazón hermoso.  
+6. Porque eres fuerte.  
+7. Porque no te rindes.  
+8. Porque me apoyas.  
+9. Porque eres sincera.  
+10. Porque eres leal.  
+11. Porque confías en mí.  
+12. Porque me haces querer mejorar.  
+13. Porque tu sonrisa ilumina todo.  
+14. Porque tus ojos brillan hermoso.  
+15. Porque tus cachetes son adorables.  
+16. Porque me haces sentir en casa.  
+17. Porque compartes tus sueños conmigo.  
+18. Porque compartes tus miedos conmigo.  
+19. Porque eres auténtica.  
+20. Porque eres dulce.  
+21. Porque eres paciente.  
+22. Porque intentas mejorar.  
+23. Porque me haces sentir amado.  
+24. Porque quieres crecer conmigo.  
+25. Porque me eliges cada día.  
+26. Porque eres constante.  
+27. Porque respetas la relación.  
+28. Porque luchas por nosotros.  
+29. Porque eres valiente.  
+30. Porque eres fuerte por dentro.  
+31. Porque tu cariño es sincero.  
+32. Porque me motivas.  
+33. Porque me das tranquilidad.  
+34. Porque me apoyas incluso en silencio.  
+35. Porque eres humilde.  
+36. Porque me haces sentir importante.  
+37. Porque eres responsable.  
+38. Porque tienes metas.  
+39. Porque me inspiras.  
+40. Porque tu amor es real.  
+41-100. Porque simplemente eres tú, Kamila, y eso siempre será suficiente.
+</p>
+
+</section>
+
+<section id="juntos">
+<h1>Juntos 🌙</h1>
+
+<p>
+Aunque hoy haya distancia y pantallas de por medio, quiero un futuro donde todo eso sea solo un recuerdo. Quiero el día en que no tengamos que despedirnos por llamada.
+</p>
+
+<p>
+Quiero nuestra casita en Palmas, quiero nuestros gatos corriendo por la casa, quiero nuestros hijos creciendo con amor. Quiero algo eterno contigo.
+</p>
+
+<p>
+No quiero algo temporal. Quiero algo para toda la vida.
+</p>
 
 </section>
 
@@ -168,9 +203,8 @@ Hecho con todo mi amor para Kamila ❤️
 
 <script>
 
-/* Mostrar carta */
-function mostrarCarta(){
-    document.getElementById("carta").style.display="block";
+function irA(seccion){
+    document.getElementById(seccion).scrollIntoView({behavior:"smooth"});
 }
 
 /* Corazones */
@@ -179,7 +213,6 @@ setInterval(() => {
     corazon.classList.add("corazon");
     corazon.innerHTML = "❤️";
     corazon.style.left = Math.random() * 100 + "vw";
-    corazon.style.fontSize = Math.random() * 20 + 10 + "px";
     document.body.appendChild(corazon);
     setTimeout(() => { corazon.remove(); }, 6000);
 }, 500);
@@ -198,7 +231,7 @@ document.addEventListener("mousemove", function(e){
 const mensajes = [
 "te amo mucho mi chelito ❤️",
 "me encantan tus ojitos ✨",
-"ola fuyu de los cojones 😭",
+"ola fuyu 😭",
 "ola doña sandra 😌",
 "te amo mucho mi niña hermosa 💖",
 "te adoro mi corazón hermoso 💕",
@@ -208,32 +241,21 @@ const mensajes = [
 
 function mostrarMensaje(){
     const mensaje = document.createElement("div");
-    mensaje.innerText = mensajes[Math.floor(Math.random() * mensajes.length)];
-    
-    mensaje.style.position = "fixed";
-    mensaje.style.top = "20%";
-    mensaje.style.left = "50%";
-    mensaje.style.transform = "translate(-50%, -50%)";
-    mensaje.style.background = "rgba(255, 77, 255, 0.95)";
-    mensaje.style.padding = "20px 40px";
-    mensaje.style.borderRadius = "30px";
-    mensaje.style.fontSize = "20px";
-    mensaje.style.boxShadow = "0 0 20px #ff00ff";
-    mensaje.style.zIndex = "9999";
-    mensaje.style.opacity = "0";
-    mensaje.style.transition = "opacity 1s ease";
-
+    mensaje.innerText = mensajes[Math.floor(Math.random()*mensajes.length)];
+    mensaje.style.position="fixed";
+    mensaje.style.top="20%";
+    mensaje.style.left="50%";
+    mensaje.style.transform="translate(-50%,-50%)";
+    mensaje.style.background="rgba(255,77,255,0.95)";
+    mensaje.style.padding="20px 40px";
+    mensaje.style.borderRadius="30px";
+    mensaje.style.boxShadow="0 0 20px #ff00ff";
+    mensaje.style.zIndex="9999";
     document.body.appendChild(mensaje);
-
-    setTimeout(() => { mensaje.style.opacity = "1"; }, 100);
-
-    setTimeout(() => {
-        mensaje.style.opacity = "0";
-        setTimeout(() => mensaje.remove(), 1000);
-    }, 8000);
+    setTimeout(()=>mensaje.remove(),8000);
 }
 
-setInterval(mostrarMensaje, 180000);
+setInterval(mostrarMensaje,180000);
 
 </script>
 
