@@ -1,56 +1,241 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Mi Página</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #1e1e2f, #302b63, #24243e);
-            color: white;
-            text-align: center;
-        }
+<meta charset="UTF-8">
+<title>Para Kamila ❤️</title>
 
-        .container {
-            padding: 100px 20px;
-        }
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #2b1055, #0f0c29);
+    color:white;
+    overflow-x:hidden;
+}
 
-        h1 {
-            font-size: 50px;
-        }
+/* Bienvenida */
+#bienvenida{
+    position:fixed;
+    width:100%;
+    height:100vh;
+    background:black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:1000;
+    animation: fadeOut 3s forwards;
+    animation-delay:3s;
+}
 
-        p {
-            font-size: 20px;
-            opacity: 0.8;
-        }
+#bienvenida h1{
+    font-size:50px;
+    color:#ff9dfc;
+    text-shadow:0 0 20px #ff00ff;
+    animation: latido 2s infinite;
+}
 
-        button {
-            padding: 15px 30px;
-            font-size: 18px;
-            border: none;
-            border-radius: 30px;
-            background: #ff4b2b;
-            color: white;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+@keyframes fadeOut{
+    to{opacity:0; visibility:hidden;}
+}
 
-        button:hover {
-            background: #ff416c;
-            transform: scale(1.1);
-        }
-    </style>
+@keyframes latido{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.1);}
+    100%{transform:scale(1);}
+}
+
+.brillo{
+    color:#ff9dfc;
+    text-shadow:0 0 10px #ff4dff,0 0 20px #ff4dff,0 0 40px #ff00ff;
+}
+
+section{
+    padding:80px 20px;
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+}
+
+p{
+    font-size:19px;
+    line-height:1.9;
+    margin-bottom:25px;
+}
+
+/* Botón */
+button{
+    padding:15px 30px;
+    font-size:18px;
+    border:none;
+    border-radius:30px;
+    background:#ff4dff;
+    color:white;
+    cursor:pointer;
+    margin-top:20px;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.1);
+}
+
+/* Carta */
+#carta{
+    display:none;
+    background:rgba(255,255,255,0.1);
+    padding:30px;
+    border-radius:20px;
+    margin-top:30px;
+}
+
+/* Corazones */
+.corazon{
+    position:fixed;
+    bottom:-10px;
+    font-size:20px;
+    animation: subir 6s linear infinite;
+    opacity:0.7;
+}
+
+@keyframes subir{
+    0%{transform:translateY(0);}
+    100%{transform:translateY(-110vh);}
+}
+
+/* Estrellas */
+.estrella{
+    position:fixed;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+    pointer-events:none;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    opacity:0.6;
+}
+</style>
 </head>
+
 <body>
 
-    <div class="container">
-        <h1>Bienvenido 🌎</h1>
-        <p>Esta es mi página web publicada en internet 🚀</p>
-        <button onclick="alert('Gracias por visitar mi página 😎')">
-            Haz clic aquí
-        </button>
-    </div>
+<!-- Bienvenida -->
+<div id="bienvenida">
+    <h1>Bienvenida Kamila 💖</h1>
+</div>
+
+<!-- Música -->
+<iframe width="0" height="0" 
+src="https://www.youtube.com/embed/0O2aH4XLbto?autoplay=1&loop=1&playlist=0O2aH4XLbto" 
+frameborder="0" allow="autoplay">
+</iframe>
+
+<section>
+<h1>pq te amo, <span class="brillo">Kamila</span></h1>
+
+<p>
+Kamila, te amo con una profundidad que a veces me deja sin palabras. Te amo porque eres fuerte incluso cuando estás cansada, porque sigues intentando aunque el mundo pese. Amo tu corazón noble, tu forma sincera de sentir y la manera tan real en la que amas.
+</p>
+
+<p>
+Amo tus ojos porque brillan como si guardaran estrellas dentro, porque cuando me miras siento paz y emoción al mismo tiempo. Amo tus cachetes porque cuando sonríes se ven tan tiernos que me derriten completamente.
+</p>
+
+<p>
+Te amo porque contigo entendí que el amor no es perfecto, pero sí es constante. Y yo quiero ser constante contigo, quiero elegirte cada día, en los momentos buenos y en los difíciles.
+</p>
+
+<button onclick="mostrarCarta()">Abrir mi carta para ti 💌</button>
+
+<div id="carta">
+<p>
+Perdón por equivocarme tantas veces pero prometo mejorar cada día para que ninguno se vaya y durar toda la vida, tener nuestra casita en Palmas, tener nuestros gatos e hijos y construir algo eterno juntos.
+</p>
+
+<p>
+Te amo mucho mi bebé preciosa, más de lo que a veces sé explicar, y aunque tropiece siempre voy a querer quedarme contigo.
+</p>
+</div>
+
+</section>
+
+<footer>
+Hecho con todo mi amor para Kamila ❤️
+</footer>
+
+<script>
+
+/* Mostrar carta */
+function mostrarCarta(){
+    document.getElementById("carta").style.display="block";
+}
+
+/* Corazones */
+setInterval(() => {
+    const corazon = document.createElement("div");
+    corazon.classList.add("corazon");
+    corazon.innerHTML = "❤️";
+    corazon.style.left = Math.random() * 100 + "vw";
+    corazon.style.fontSize = Math.random() * 20 + 10 + "px";
+    document.body.appendChild(corazon);
+    setTimeout(() => { corazon.remove(); }, 6000);
+}, 500);
+
+/* Estrellas */
+document.addEventListener("mousemove", function(e){
+    const estrella = document.createElement("div");
+    estrella.classList.add("estrella");
+    estrella.style.left = e.pageX + "px";
+    estrella.style.top = e.pageY + "px";
+    document.body.appendChild(estrella);
+    setTimeout(() => { estrella.remove(); }, 500);
+});
+
+/* Mensajes cada 3 minutos */
+const mensajes = [
+"te amo mucho mi chelito ❤️",
+"me encantan tus ojitos ✨",
+"ola fuyu de los cojones 😭",
+"ola doña sandra 😌",
+"te amo mucho mi niña hermosa 💖",
+"te adoro mi corazón hermoso 💕",
+"eres la niña más fuerte del mundo 🌟",
+"te quiero dar muchos besitos 😘"
+];
+
+function mostrarMensaje(){
+    const mensaje = document.createElement("div");
+    mensaje.innerText = mensajes[Math.floor(Math.random() * mensajes.length)];
+    
+    mensaje.style.position = "fixed";
+    mensaje.style.top = "20%";
+    mensaje.style.left = "50%";
+    mensaje.style.transform = "translate(-50%, -50%)";
+    mensaje.style.background = "rgba(255, 77, 255, 0.95)";
+    mensaje.style.padding = "20px 40px";
+    mensaje.style.borderRadius = "30px";
+    mensaje.style.fontSize = "20px";
+    mensaje.style.boxShadow = "0 0 20px #ff00ff";
+    mensaje.style.zIndex = "9999";
+    mensaje.style.opacity = "0";
+    mensaje.style.transition = "opacity 1s ease";
+
+    document.body.appendChild(mensaje);
+
+    setTimeout(() => { mensaje.style.opacity = "1"; }, 100);
+
+    setTimeout(() => {
+        mensaje.style.opacity = "0";
+        setTimeout(() => mensaje.remove(), 1000);
+    }, 8000);
+}
+
+setInterval(mostrarMensaje, 180000);
+
+</script>
 
 </body>
 </html>
